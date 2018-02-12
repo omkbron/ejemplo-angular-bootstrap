@@ -1,0 +1,10 @@
+<ul class="heroes">
+
+</ul>
+<div class="list-group">
+  <div *ngFor="let hero of heroes">
+    <a routerLink="/detail/{{hero.id}}" href="#" class="list-group-item list-group-item-action">
+      <span class="badge">{{hero.id}}</span> {{hero.name}}
+    </a>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<div *ngIf="messageService.messages.length">
+    <div class="card">
+        <h5 class="card-header">Messages</h5>
+        <div class="card-body">
+            <button type="button" class="btn btn-danger" (click)="messageService.clear()">clear</button>
+            <hr>
+            <ul class="list-group">
+                <li class="list-group-item" *ngFor='let message of messageService.messages'>{{message}}</li>
+            </ul>
+        </div>
+    </div>
+</div>
