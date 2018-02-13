@@ -1,11 +1,10 @@
-<div *ngIf="hero">
-
-  <h2>{{ hero.name | uppercase }} Details</h2>
-  <div><span>id: </span>{{hero.id}}</div>
-  <div>
-    <label>name:
-      <input [(ngModel)]="hero.name" placeholder="name"/>
-    </label>
+<div *ngIf="hero" class="card border-primary mb-3" style="max-width: 18rem;">
+  <div class="card-header">{{ hero.name | uppercase }} Details</div>
+  <div class="card-body text-dark">
+    <p class="card-text"><span>id: </span>{{hero.id}}</p>
+    <input class="form-control" type="text" [(ngModel)]="hero.name" placeholder="Name">
   </div>
-  <button type="button" class="btn btn-outline-dark" (click)="goBack()">go back</button>
+  <div class="card-footer">
+      <button type="button" class="btn btn-dark" (click)="goBack()">go back</button>
+  </div>
 </div>
